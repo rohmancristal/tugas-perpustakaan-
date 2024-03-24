@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,43 +30,89 @@
 
     <h1>Perpustakaan</h1>
 
-    <div class="container">
-      <div class="form-container">
-        <h2>Pendaftaran Mahasiswa</h2>
-        <form action="#" method="post">
-          <div class="form-group">
-            <label for="nama">Nama:</label>
-            <input type="text" id="nama" name="nama" required />
-          </div>
-          <div class="form-group">
-            <label for="nim">NIM:</label>
-            <input type="text" id="nim" name="nim" required />
-          </div>
-          <div class="form-group">
-            <label for="jurusan">Jurusan:</label>
-            <input type="text" id="jurusan" name="jurusan" required />
-          </div>
-          <button type="submit">Submit</button>
-        </form>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 400px;
+  }
+
+  .form-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="form-container">
+    <h2>Login Mahasiswa Peminjaman Buku</h2>
+    <form action="#" method="post">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
       </div>
-      <div class="form-container">
-        <h2>Pinjam Buku</h2>
-        <form action="#" method="post">
-          <div class="form-group">
-            <label for="judul">Judul Buku:</label>
-            <input type="text" id="judul" name="judul" required />
-          </div>
-          <div class="form-group">
-            <label for="pengarang">Pengarang:</label>
-            <input type="text" id="pengarang" name="pengarang" required />
-          </div>
-          <div class="form-group">
-            <label for="peminjam">Nama Peminjam:</label>
-            <input type="text" id="peminjam" name="peminjam" required />
-          </div>
-          <button type="submit">Submit</button>
-        </form>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
       </div>
-    </div>
+      <button>
+        <a href="table/">log in</a>
+      </button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
+
+</html>
+
   </body>
 </html>
